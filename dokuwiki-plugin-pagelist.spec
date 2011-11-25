@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		plugindir	%{dokudir}/lib/plugins/%{plugin}
 
 %description
-The Pagelist Plugin does – as its name says – list wiki pages in a
+The Pagelist Plugin does - as its name says - list wiki pages in a
 nice way. Besides its function as a stand-alone syntax plugin, it
 serves as helper plugin for the Blog, Discussion, Editor, Tag, Task
 and Dir plugins.
