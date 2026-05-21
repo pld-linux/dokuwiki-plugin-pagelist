@@ -1,15 +1,15 @@
-%define		subver	2016-01-16
+%define		subver	2023-08-27
 %define		ver		%(echo %{subver} | tr -d -)
 %define		plugin		pagelist
 %define		php_min_version 5.3.0
 Summary:	DokuWiki Pagelist Plugin
 Name:		dokuwiki-plugin-%{plugin}
 Version:	%{ver}
-Release:	2
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	https://github.com/dokufreaks/plugin-pagelist/archive/ceb4a8863/%{plugin}-%{subver}.tar.gz
-# Source0-md5:	59fb31867bc8bf59e1a63b616f1eae1f
+Source0:	https://github.com/dokufreaks/plugin-pagelist/archive/c8452fb55d/%{plugin}-%{subver}.tar.gz
+# Source0-md5:	f96e42cbf7d7cb3a01a187eed8324b0a
 URL:		https://www.dokuwiki.org/plugin:pagelist
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.553
@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		dokuconf	/etc/webapps/dokuwiki
 %define		dokudir		/usr/share/dokuwiki
 %define		plugindir	%{dokudir}/lib/plugins/%{plugin}
-%define		find_lang 	%{_usrlibrpm}/dokuwiki-find-lang.sh %{buildroot}
+%define		find_lang	%{_rpmconfigdir}/dokuwiki-find-lang.sh %{buildroot}
 
 %description
 The Pagelist Plugin does - as its name says - list wiki pages in a
